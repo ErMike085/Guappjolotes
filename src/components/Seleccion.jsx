@@ -39,27 +39,27 @@ const Seleccion = () => {
             <ContAdicion>
                 <ItemBebidas>
                     <Check type="checkbox" name="" id="" />
-                    <Bebida src="https://res.cloudinary.com/dlkynkfvq/image/upload/v1642714719/guappjolota/B-CHAMPURRADO_d4bgmp.png" alt="bebida" />
+                    <Bebida src="https://res.cloudinary.com/dzyyi4p7x/image/upload/v1636767989/Guappjolotes%20-%20Sprint%202/bebidas/bebida-champurrado_rgdbrt.png" alt="bebida" />
                     <NombreBe>Champurrado</NombreBe>
                     <PrecioBe>+ $12 MXN</PrecioBe>
                 </ItemBebidas>
                 <ItemBebidas>
                 <Check type="checkbox" name="" id="" />
-                    <Bebida src="https://res.cloudinary.com/dlkynkfvq/image/upload/v1642714718/guappjolota/B-ARROZ_CON_LECHE_cgf6zu.png" alt="bebida" />
+                    <Bebida src="https://res.cloudinary.com/dzyyi4p7x/image/upload/v1636767989/Guappjolotes%20-%20Sprint%202/bebidas/bebida-arroz_ogcu5h.png" alt="bebida" />
                     <NombreBe>Atole de Arroz</NombreBe>
                     <PrecioBe>+ $12 MXN</PrecioBe>
 
                 </ItemBebidas>
                 <ItemBebidas>
                     <Check type="checkbox" name="" id="" />
-                    <Bebida src="https://res.cloudinary.com/dlkynkfvq/image/upload/v1642714718/guappjolota/B-CHOCOLATE_jzyh84.png" alt="bebida" />
+                    <Bebida src="https://res.cloudinary.com/dzyyi4p7x/image/upload/v1636767989/Guappjolotes%20-%20Sprint%202/bebidas/bebida-chocolate_ovrnuj.png" alt="bebida" />
                     <NombreBe>Chocolate caliente</NombreBe>
                     <PrecioBe>+ $12 MXN</PrecioBe>
 
                 </ItemBebidas>
                 <ItemBebidas>
                     <Check type="checkbox" name="" id="" />
-                    <Bebida src="https://res.cloudinary.com/dlkynkfvq/image/upload/v1642714718/guappjolota/B-CAFE_gughuk.png" alt="bebida" />
+                    <Bebida src="https://res.cloudinary.com/dzyyi4p7x/image/upload/v1636767989/Guappjolotes%20-%20Sprint%202/bebidas/bebida-cafe_njxxpz.png" alt="bebida" />
                     <NombreBe>Café negro</NombreBe>
                     <PrecioBe>+ $12 MXN</PrecioBe>
 

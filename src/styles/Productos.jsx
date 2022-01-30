@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Cards = styled.div`
-width: 30%;
+width: 300px;
 margin: 1%;
 border-radius: 20px;
 padding: 1%;
@@ -11,7 +11,7 @@ justify-content: center;
 background-color:#FFFFFF ;
 `
 export const ImagenP = styled.img`
-max-width: 20%;
+width: 80px;
 margin-right: 1%;
 `
 export const InfoCard = styled.div`
@@ -19,10 +19,10 @@ export const InfoCard = styled.div`
 `
 export const Nombre = styled.h2`
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-    font-size: 1.15em;
+    font-size: 18px;
 `
 export const Precio = styled.h3`
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-    font-size: 1em;
+    font-size: 14px;
     color: #FA4A0C;
 `
