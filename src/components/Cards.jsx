@@ -2,27 +2,28 @@ import React, { useEffect, useState } from "react";
 import { getData } from "../helpers/getData";
 import { Card, ImagenP, InfoCard, Nombre, Precio } from "../styles/Productos";
 import { Link, useParams } from "react-router-dom";
+import Home from "../containers/Home";
 
 const Cards = () => {
-  const [bebidas, setBebidas] = useState([]);
+  const [carta, setCarta] = useState([]);
 
   const { producto } = useParams();
 
-  console.log(producto);
   const traerDatos = async () => {
     const datos = await getData(producto);
-    setBebidas(datos);
+    setCarta(datos);
   };
 
   useEffect(() => {
     traerDatos();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [bebidas]);
+  }, [carta]);
 
   return (
     <div>
-      {bebidas.map((prod) => (
-        <Link to={`/detalle/`} key={prod.id}>
+      <Home />
+      {carta.map((prod) => (
+        <Link to={`/detalle/${producto}/${prod.id}`} key={prod.id}>
           <Card>
             <ImagenP src={prod.imagen} alt="Producto" />
             <InfoCard>
