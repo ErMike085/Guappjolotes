@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Cont = styled.div`
-  width: 360px;
-  margin: auto;
-  padding: 1%;
-  border: 1px solid black;
-`;
+    width: 360px;
+    
+    padding: 1%;
+    border: 1px solid black;
+`
 export const Navb = styled.nav`
   height: 5vh;
   padding: 2%;
@@ -103,8 +103,8 @@ export const Check = styled.input`
   float: right;
 `;
 export const Bebida = styled.img`
-  width: 64px;
-`;
+    width: 80px;
+`
 export const NombreBe = styled.p`
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 0.9rem;
