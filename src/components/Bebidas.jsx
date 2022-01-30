@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Cards, Imagen, ImagenP, InfoCard, Nombre, Precio } from "../styles/Productos";
+import { Cards, ImagenP, InfoCard, Nombre, Precio } from "../styles/Productos";
 
 const url = 'https://guappjolotes.herokuapp.com/bebidas'
 const Bebidas = () => {
