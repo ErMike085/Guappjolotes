@@ -1,28 +1,35 @@
-import React, { Component } from 'react';
-
-import {AiOutlineShoppingCart} from 'react-icons/ai'
-import { Link } from 'react-router-dom';
-import Bebidas from '../components/Bebidas';
-
-
-
+import React, { Component } from "react";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import { Img, Nav } from "../styles/Home";
 
 export default class Home extends Component {
   render() {
     return (
       <div>
-        <nav>
-          <Link to={"/"}>
-            {/* <img></img> */}
+        <Nav>
+          <Link to="/">
+            <Img
+              src="https://res.cloudinary.com/dpv7hhumv/image/upload/v1643215065/Amazonas/Ilustracio%CC%81n_sin_ti%CC%81tulo_66_1_thknhh.png"
+              alt=""
+            />
           </Link>
-          <Link to={"/"}>
-          <AiOutlineShoppingCart />
+          <Link to="/" className="carrito">
+            <AiOutlineShoppingCart className="carrito" />
           </Link>
-        </nav>
-        <Bebidas />
+        </Nav>
+        <div>
+          <h1>Nada como una Guajolota para empezar el día</h1>
+          <input type="text" />
+          <section>
+            <div>
+              <Link to={`/guajolotes`}>Guajolotas</Link>
+              <Link to={`/bebidas`}>Bebidas</Link>
+              <Link to={`/tamales`}>Tamales</Link>
+            </div>
+          </section>
+        </div>
       </div>
-    )
+    );
   }
 }
-
-
