@@ -1,6 +1,7 @@
 import types from "../type/types";
 
 const ProductReducer = (state, action) => {
+  console.log(state);
   switch (action.type) {
     case types.agregarNumero:
       return {

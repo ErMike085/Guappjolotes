@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
+export const StyledDiv = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export const Cont = styled.div`
-    width: 360px;
-    
-    padding: 1%;
-    border: 1px solid black;
-`
+  width: 360px;
+  padding: 1%;
+  border: 1px solid black;
+`;
 export const Navb = styled.nav`
   height: 5vh;
   padding: 2%;
@@ -103,8 +107,8 @@ export const Check = styled.input`
   float: right;
 `;
 export const Bebida = styled.img`
-    width: 80px;
-`
+  width: 80px;
+`;
 export const NombreBe = styled.p`
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 0.9rem;
