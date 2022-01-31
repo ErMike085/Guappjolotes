@@ -3,30 +3,22 @@ import { IoIosArrowBack } from "react-icons/io";
 import { BsPlusCircle } from "react-icons/bs";
 import { AiOutlineMinusCircle } from "react-icons/ai";
 import {
-  Bebida,
-  BotonAgregar,
   BotonesCont,
   Cantidad,
-  Check,
   Cont,
-  ContAdicion,
   Contador,
   ContProduct,
-  Descrip,
-  ItemBebidas,
   Navb,
-  NombreBe,
   NombreProd,
-  PrecioBe,
   PrecioProd,
   Product,
-  SegSubtitulo,
   StyledDiv,
 } from "../styles/StyledSeleccion";
 import { Link, useParams } from "react-router-dom";
 import productContext from "../context/ProductContext";
 import { url } from "../helpers/getData";
 import SaboresCards from "./Sabores";
+import Combo from "./Combo";
 
 const Seleccion = () => {
   const params = useParams();
@@ -89,38 +81,7 @@ const Seleccion = () => {
 
         <SaboresCards producto={params.producto} cambiarSabor={cambiarSabor} sabor={productoSabor} />
 
-        <SegSubtitulo>Guajolocombo</SegSubtitulo>
-        <Descrip>Selecciona la bebida que más te guste y disfruta de tu desayuno</Descrip>
-        <ContAdicion>
-          <ItemBebidas>
-            <Check type="checkbox" name="" id="" />
-            <Bebida src="https://res.cloudinary.com/dlkynkfvq/image/upload/v1642714719/guappjolota/B-CHAMPURRADO_d4bgmp.png" alt="bebida" />
-            <NombreBe>Champurrado</NombreBe>
-            <PrecioBe>+ $12 MXN</PrecioBe>
-          </ItemBebidas>
-          <ItemBebidas>
-            <Check type="checkbox" name="" id="" />
-            <Bebida
-              src="https://res.cloudinary.com/dlkynkfvq/image/upload/v1642714718/guappjolota/B-ARROZ_CON_LECHE_cgf6zu.png"
-              alt="bebida"
-            />
-            <NombreBe>Atole de Arroz</NombreBe>
-            <PrecioBe>+ $12 MXN</PrecioBe>
-          </ItemBebidas>
-          <ItemBebidas>
-            <Check type="checkbox" name="" id="" />
-            <Bebida src="https://res.cloudinary.com/dlkynkfvq/image/upload/v1642714718/guappjolota/B-CHOCOLATE_jzyh84.png" alt="bebida" />
-            <NombreBe>Chocolate caliente</NombreBe>
-            <PrecioBe>+ $12 MXN</PrecioBe>
-          </ItemBebidas>
-          <ItemBebidas>
-            <Check type="checkbox" name="" id="" />
-            <Bebida src="https://res.cloudinary.com/dlkynkfvq/image/upload/v1642714718/guappjolota/B-CAFE_gughuk.png" alt="bebida" />
-            <NombreBe>Café negro</NombreBe>
-            <PrecioBe>+ $12 MXN</PrecioBe>
-          </ItemBebidas>
-          <BotonAgregar>Agregar </BotonAgregar>
-        </ContAdicion>
+        <Combo producto={params.producto} />
       </Cont>
     </StyledDiv>
   );
