@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { BotonIngresar, ContForm, ContImg, CrearC, Inputs, Logo, Titulo } from '../styles/StyledLogin';
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { BotonIngresar, ContForm, ContImg, CrearC, Inputs, Logo, Titulo } from "../styles/StyledLogin";
 
 const Login = () => {
   const [data, setData] = useState({
@@ -20,7 +20,9 @@ const Login = () => {
   const getData = JSON.parse(localStorage.getItem("Usuario"));
 
   useEffect(() => {
+    // eslint-disable-next-line no-unused-expressions
     getData;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const Validacion = () => {

@@ -8,8 +8,8 @@ function AppRouter() {
   return (
     <ProductState>
       <BrowserRouter>
-        <Login />
         <Routes>
+          <Route path="/" element={<Login />} />
           <Route path="/home/:producto" element={<Cards />} />
           <Route path="/detalle/:producto/:id" element={<Seleccion />} />
         </Routes>
