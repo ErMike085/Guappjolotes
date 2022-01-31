@@ -5,6 +5,7 @@ import Seleccion from "../components/Seleccion";
 function AppRouter() {
   return (
     <BrowserRouter>
+    <div>Hola</div>
       <Routes>
         <Route path="/home/:producto" element={<Cards />} />
         <Route path="/detalle/:producto/:id" element={<Seleccion />} />
