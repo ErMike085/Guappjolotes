@@ -8,7 +8,7 @@ const Login = () => {
     contraseña: "",
     logueado: false,
   });
-  const { usuario, contraseña, logueado } = data;
+  // const { usuario, contraseña, logueado } = data;
   const handleChange = ({ target }) => {
     setData({
       ...data,

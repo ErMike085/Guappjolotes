@@ -1,4 +1,5 @@
 import {React, useState}  from 'react';
+import { useNavigate } from 'react-router-dom';
 import { BotonIngresar, ContForm, ContImg, Inputs, Logo, Titulo } from '../styles/StyledLogin';
 
 
@@ -8,7 +9,7 @@ const Registro = () => {
         contraseña:"",
         logueado:false
     })
-    const {usuario,contraseña, logueado } = data
+    // const {usuario,contraseña, logueado } = data
     const handleChange = ({target})=>{
         setData({
             ...data,
@@ -16,9 +17,10 @@ const Registro = () => {
         })
     }
     
-
+    const navigate = useNavigate();
     const handleSubmit = (e)=>{
         e.preventDefault();
+        navigate("/home/guajolotes");
     }
     const handleClick = ()=>{
         data.logueado = true
