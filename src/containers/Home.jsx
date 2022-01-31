@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { Img, Nav } from "../styles/Home";
+import { ContDiv, Img, InputB, Nav, NavII } from "../styles/Home";
 
 export default class Home extends Component {
   render() {
     return (
-      <div>
+      <ContDiv>
         <Nav>
           <Link to="/">
             <Img
@@ -20,16 +20,16 @@ export default class Home extends Component {
         </Nav>
         <div>
           <h1>Nada como una Guajolota para empezar el día</h1>
-          <input type="text" />
+          <InputB type="search" placeholder="Sabor de guajolote, bebida" />
           <section>
-            <div>
-              <Link to={`/home/guajolotes`}>Guajolotas</Link>
-              <Link to={`/home/bebidas`}>Bebidas</Link>
-              <Link to={`/home/tamales`}>Tamales</Link>
-            </div>
+            <NavII>
+              <Link className="LinkNav" to={`/home/guajolotes`}>Guajolotas</Link>
+              <Link className="LinkNav" to={`/home/bebidas`}>Bebidas</Link>
+              <Link className="LinkNav" to={`/home/tamales`}>Tamales</Link>
+            </NavII>
           </section>
         </div>
-      </div>
+      </ContDiv>
     );
   }
 }

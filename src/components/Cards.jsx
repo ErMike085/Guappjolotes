@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getData } from "../helpers/getData";
-import { Card, ImagenP, InfoCard, Nombre, Precio } from "../styles/Productos";
+import { Card, ImagenP, InfoCard, Nombre, Precio, ContCard } from "../styles/Productos";
 import { Link, useParams } from "react-router-dom";
 import Home from "../containers/Home";
 
@@ -20,10 +20,10 @@ const Cards = () => {
   }, [carta]);
 
   return (
-    <div>
+    <ContCard>
       <Home />
       {carta.map((prod) => (
-        <Link to={`/detalle/${producto}/${prod.id}`} key={prod.id}>
+        <Link className="linkX" to={`/detalle/${producto}/${prod.id}`} key={prod.id}>
           <Card>
             <ImagenP src={prod.imagen} alt="Producto" />
             <InfoCard>
@@ -33,7 +33,7 @@ const Cards = () => {
           </Card>
         </Link>
       ))}
-    </div>
+    </ContCard>
   );
 };
 

@@ -6,3 +6,16 @@ body {
   width: 24px;
   height: 24px;
 }
+.linkX{
+  width: 10%;
+  text-decoration: none;
+}
+.LinkNav{
+  margin-top: 2%;
+  text-decoration: none;
+  color: #9A9A9D;
+}
+.LinkNav:focus{
+  text-decoration: underline;
+  color:#FA4A0C ;
+}
