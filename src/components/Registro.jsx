@@ -1,6 +1,6 @@
 import {React, useState}  from 'react';
+import { BotonIngresar, ContForm, ContImg, Inputs, Logo, Titulo } from '../styles/StyledLogin';
 
-import { BotonIngresar, ContForm, ContImg, Inputs, Logo, Titulo } from "./styles/StyledLogin";
 
 const Registro = () => {
     const [data, setData] = useState({

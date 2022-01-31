@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BotonIngresar, ContForm, ContImg, CrearC, Inputs, Logo, Titulo } from "../styles/StyledLogin";
 
 const Login = () => {
@@ -27,7 +27,7 @@ const Login = () => {
 
   const Validacion = () => {
     if (getData.contraseña === data.contraseña && getData.usuario === data.usuario) {
-      navigate("/home/tamales");
+      navigate("/home/guajolotes");
     }
   };
 
@@ -47,7 +47,7 @@ const Login = () => {
       <Inputs type="email" name="usuario" onChange={handleChange} placeholder="Ingresa tu correo" required />
       <Inputs type="password" name="contraseña" onChange={handleChange} placeholder="Ingresa tu contraseña" required />
       <BotonIngresar>Ingresar</BotonIngresar>
-      <CrearC>¿No tienes cuenta ? Crea una cuenta </CrearC>
+      <CrearC>¿No tienes cuenta ? <Link to="/registro"> Crea una cuenta </Link></CrearC>
     </ContForm>
   );
 };
