@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { BotonIngresar, ContForm, ContImg, CrearC, Inputs, Logo, Titulo } from "./styles/StyledLogin";
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { BotonIngresar, ContForm, ContImg, CrearC, Inputs, Logo, Titulo } from '../styles/StyledLogin';
 
 const Login = () => {
   const [data, setData] = useState({
