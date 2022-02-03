@@ -96,7 +96,7 @@ export const ContAdicion = styled.form`
   padding: 2%;
 `;
 export const ItemBebidas = styled.div`
-  width: 142px;
+  width: 120px;
   border-radius: 8px;
   background: white;
   padding: 3%;

@@ -4,7 +4,7 @@ export const ContForm = styled.form`
     width: 300px;
     background: white;
     border-radius: 10px;
-    border: 1px solid black;
+    box-shadow: 1px 2px 50px 5px #b6b6b6;
     margin: auto;
     padding: 2%;
     display: flex;
