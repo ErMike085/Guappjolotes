@@ -1,5 +1,5 @@
-import React from "react";
-// import productContext from "../context/ProductContext";
+import React, { useContext } from "react";
+import productContext from "../context/ProductContext";
 import {
   Bebida,
   BotonAgregar,
@@ -13,11 +13,19 @@ import {
 } from "../styles/StyledSeleccion";
 
 const Combo = ({ producto }) => {
-  // const productoContext = useContext(productContext);
-  // const { agregarCarrito, quitarCarrito } = productContext;
+  const productoContext = useContext(productContext);
+  const { agregarCarrito, quitarCarrito } = productContext;
 
-  // let productoCombo, combo
+  let urlProductoCombo, productoCombo;
 
+  if (producto === "guajolotes" || producto === "tamales") {
+    urlProductoCombo = "bebidas";
+    productoCombo = "la bebida";
+  } else if (producto === "bebidas") {
+    urlProductoCombo = "bebidas";
+    productoCombo = "la bebida";
+  } else {
+  }
   return (
     <div>
       <Descrip>Selecciona la bebida que más te guste y disfruta de tu desayuno</Descrip>
