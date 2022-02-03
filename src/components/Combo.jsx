@@ -20,6 +20,7 @@ const Combo = ({ producto }) => {
 
   return (
     <div>
+      <SegSubtitulo>Guajolocombo</SegSubtitulo>
       <Descrip>Selecciona la bebida que más te guste y disfruta de tu desayuno</Descrip>
       <ContAdicion>
         <ItemBebidas>
@@ -30,7 +31,7 @@ const Combo = ({ producto }) => {
         </ItemBebidas>
         <BotonAgregar>Agregar </BotonAgregar>
       </ContAdicion>
-      ;<SegSubtitulo>Guajolocombo</SegSubtitulo>
+      
     </div>
   );
 };
