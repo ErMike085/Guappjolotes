@@ -17,7 +17,7 @@ const Cards = () => {
   useEffect(() => {
     traerDatos();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [carta]);
+  }, [producto]);
 
   return (
     <ContCard>

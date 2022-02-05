@@ -47,7 +47,9 @@ const Login = () => {
       <Inputs type="email" name="usuario" onChange={handleChange} placeholder="Ingresa tu correo" required />
       <Inputs type="password" name="contraseña" onChange={handleChange} placeholder="Ingresa tu contraseña" required />
       <BotonIngresar>Ingresar</BotonIngresar>
-      <CrearC>¿No tienes cuenta ? <Link to="/registro"> Crea una cuenta </Link></CrearC>
+      <CrearC>
+        ¿No tienes cuenta ? <Link to="/registro"> Crea una cuenta </Link>
+      </CrearC>
     </ContForm>
   );
 };

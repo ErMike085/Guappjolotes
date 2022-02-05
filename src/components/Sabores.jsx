@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { url } from "../helpers/getData";
 import { ContSabores, Sabores, Subtitulo } from "../styles/StyledSeleccion";
 
-const SaboresCards = ({ producto, cambiarSabor, sabor }) => {
+const SaboresCards = ({ producto, cambiarSabor }) => {
+  const [sabor, setSabor] = useState([]);
+
+  let urlProducto;
+  producto === "guajolotes" ? (urlProducto = "saboresTortas") : (urlProducto = "saboresBebidas");
+
+  const getData = async () => {
+    const resp = await fetch(url + urlProducto);
+    const data = await resp.json();
+    setSabor(data);
+  };
+
+  useEffect(() => {
+    getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sabor]);
+
   return (
     <div>
       <Subtitulo>Sabor</Subtitulo>

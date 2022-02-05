@@ -7,6 +7,7 @@ const ProductState = ({ children }) => {
   const estadoInicial = {
     totalProductos: 0,
     carrito: [],
+    combo: [],
   };
   const [state, dispatch] = useReducer(ProductReducer, estadoInicial);
 
@@ -29,6 +30,20 @@ const ProductState = ({ children }) => {
     });
   };
 
+  const agregarCombo = (producto) => {
+    dispatch({
+      type: types.agregarCombo,
+      payload: producto,
+    });
+  };
+
+  const quitarCombo = (producto) => {
+    dispatch({
+      type: types.quitarCombo,
+      payload: producto,
+    });
+  };
+
   const quitarCarrito = (producto) => {
     dispatch({
       type: types.quitarCarrito,
@@ -41,10 +56,13 @@ const ProductState = ({ children }) => {
       value={{
         totalProductos: state.totalProductos,
         carrito: state.carrito,
+        combo: state.combo,
         agregarNumero,
         disminuirNumero,
         agregarCarrito,
         quitarCarrito,
+        agregarCombo,
+        quitarCombo,
       }}
     >
       {children}

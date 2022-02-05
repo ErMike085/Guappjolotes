@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { BsPlusCircle } from "react-icons/bs";
-import { AiOutlineMinusCircle } from "react-icons/ai";
+import { AiOutlineMinusCircle, AiOutlineShoppingCart } from "react-icons/ai";
 import {
   BotonesCont,
   Cantidad,
@@ -37,12 +37,12 @@ const Seleccion = () => {
     setProductoSabor(data);
   };
 
-  const agregarProductoCarrito = () => {
+  const subirCantidad = () => {
     agregarNumero();
     agregarCarrito(detalle);
   };
 
-  const quitarProductoCarrito = () => {
+  const bajarCantidad = () => {
     disminuirNumero();
     quitarCarrito(detalle);
   };
@@ -53,13 +53,16 @@ const Seleccion = () => {
   useEffect(() => {
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [params, detalle]);
+  }, [params]);
   return (
     <StyledDiv>
       <Cont>
         <Navb>
           <Link to="/home/guajolotes">
             <IoIosArrowBack />
+          </Link>
+          <Link to="/carrito" className="carrito">
+            <AiOutlineShoppingCart className="carrito" />
           </Link>
         </Navb>
         <ContProduct>
@@ -70,11 +73,11 @@ const Seleccion = () => {
           <PrecioProd>{detalle.precio}$ MXN</PrecioProd>
         </center>
         <Contador>
-          <BotonesCont onClick={() => quitarProductoCarrito()}>
+          <BotonesCont onClick={() => bajarCantidad()}>
             <AiOutlineMinusCircle />
           </BotonesCont>
           <Cantidad>{totalProductos}</Cantidad>
-          <BotonesCont onClick={() => agregarProductoCarrito()}>
+          <BotonesCont onClick={() => subirCantidad()}>
             <BsPlusCircle />
           </BotonesCont>
         </Contador>

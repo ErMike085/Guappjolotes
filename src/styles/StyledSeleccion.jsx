@@ -14,6 +14,8 @@ export const Navb = styled.nav`
   height: 5vh;
   padding: 2%;
   padding-top: 5%;
+  display: flex;
+  justify-content: space-between;
 `;
 export const Atras = styled.button`
   border: none;

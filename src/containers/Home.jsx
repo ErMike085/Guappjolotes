@@ -14,7 +14,7 @@ export default class Home extends Component {
               alt=""
             />
           </Link>
-          <Link to="/" className="carrito">
+          <Link to="/carrito" className="carrito">
             <AiOutlineShoppingCart className="carrito" />
           </Link>
         </Nav>
@@ -23,9 +23,15 @@ export default class Home extends Component {
           <InputB type="search" placeholder="Sabor de guajolote, bebida" />
           <section>
             <NavII>
-              <Link className="LinkNav" to={`/home/guajolotes`}>Guajolotas</Link>
-              <Link className="LinkNav" to={`/home/bebidas`}>Bebidas</Link>
-              <Link className="LinkNav" to={`/home/tamales`}>Tamales</Link>
+              <Link className="LinkNav" to={`/home/guajolotes`}>
+                Guajolotas
+              </Link>
+              <Link className="LinkNav" to={`/home/bebidas`}>
+                Bebidas
+              </Link>
+              <Link className="LinkNav" to={`/home/tamales`}>
+                Tamales
+              </Link>
             </NavII>
           </section>
         </div>
