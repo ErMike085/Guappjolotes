@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CardMini, Cont, ImgProd, MiniCards, NombreP, PrecioP } from "../styles/StyledCarrito";
+import { BtnEliminar, BtnPagar, CardMini, Cont, ContTotal, ImgProd, MiniCards, NombreP, PrecioP, PrecioTotal, TotalT } from "../styles/StyledCarrito";
 
 const Carrito = () => {
   let traerCarrito = JSON.parse(localStorage.getItem("carrito"));
@@ -19,6 +19,8 @@ const Carrito = () => {
   return (
     <Cont>
       <Link className="GoHome" to="/home/guajolotes">Home</Link>
+      <BtnEliminar onClick={() => eliminarCarrito()}>Eliminar Carrito</BtnEliminar>
+
       <MiniCards>
         {carrito.map((prod) => (
           <CardMini key={prod.id}>
@@ -35,8 +37,10 @@ const Carrito = () => {
           </CardMini>
         ))}
       </MiniCards>
-      <h1>Total: $ {getPrecio()} MXN</h1>
-      <button onClick={() => eliminarCarrito()}>Eliminar Carrito</button>
+      <ContTotal>
+      <TotalT>Total:  <PrecioTotal> $ {getPrecio()} MXN</PrecioTotal></TotalT>
+      </ContTotal>
+      <BtnPagar>Pagar</BtnPagar>
     </Cont>
   );
 };
