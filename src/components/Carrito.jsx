@@ -3,15 +3,21 @@ import { Link } from "react-router-dom";
 
 const Carrito = () => {
   let traerCarrito = JSON.parse(localStorage.getItem("carrito"));
-  const { combo, carrito } = traerCarrito;
+  const { combo, carrito, totalProductos } = traerCarrito;
 
   let eliminarCarrito = () => {
     localStorage.clear();
   };
+
+  const getPrecio = () => {
+    let totalCompraCombo = combo.map((dato) => dato.precio * combo.length);
+    let totalCompraCarrito = carrito.map((dato) => dato.precio * totalProductos);
+    let totalCompra = Number(totalCompraCarrito) + Number(totalCompraCombo);
+    return totalCompra;
+  };
   return (
     <div>
       <Link to="/home/guajolotes">Home</Link>
-      <button onClick={() => eliminarCarrito()}>Eliminar Carrito</button>
       <ul>
         {carrito.map((prod) => (
           <li key={prod.id}>
@@ -28,6 +34,8 @@ const Carrito = () => {
           </li>
         ))}
       </ul>
+      <h1>Total: $ {getPrecio()} MXN</h1>
+      <button onClick={() => eliminarCarrito()}>Eliminar Carrito</button>
     </div>
   );
 };

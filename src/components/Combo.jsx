@@ -15,7 +15,7 @@ import {
 
 const Combo = ({ producto }) => {
   const productoContext = useContext(productContext);
-  const { agregarCombo, quitarCombo, combo, carrito } = productoContext;
+  const { agregarCombo, quitarCombo, combo, carrito, totalProductos } = productoContext;
   let urlProductoCombo, productoCombo;
   producto === "guajolotes" || producto === "tamales"
     ? (urlProductoCombo = "bebidas") && (productoCombo = "la bebida")
@@ -37,9 +37,15 @@ const Combo = ({ producto }) => {
   };
 
   const guardarLocal = () => {
-    let local = { combo, carrito };
+    let local = { combo, carrito, totalProductos };
     localStorage.setItem("carrito", JSON.stringify(local));
     console.log(local);
+  };
+  const getPrecio = () => {
+    let totalCompraCombo = combo.map((dato) => dato.precio * combo.length);
+    let totalCompraCarrito = carrito.map((dato) => dato.precio * totalProductos);
+    let totalCompra = Number(totalCompraCarrito) + Number(totalCompraCombo);
+    return totalCompra;
   };
 
   useEffect(() => {
@@ -61,7 +67,9 @@ const Combo = ({ producto }) => {
             <PrecioBe>+ $ {data.precio} MXN</PrecioBe>
           </ItemBebidas>
         ))}
-        <BotonAgregar onClick={guardarLocal}>Agregar {cantidad} al carrito</BotonAgregar>
+        <BotonAgregar onClick={guardarLocal}>
+          Agregar {cantidad} al carrito {getPrecio()}
+        </BotonAgregar>
       </ContAdicion>
     </div>
   );
