@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BtnEliminar, BtnPagar, CardMini, Cont, ContTotal, ImgProd, MiniCards, NombreP, PrecioP, PrecioTotal, TotalT } from "../styles/StyledCarrito";
 
 const Carrito = () => {
   let traerCarrito = JSON.parse(localStorage.getItem("carrito"));
@@ -16,27 +17,31 @@ const Carrito = () => {
     return totalCompra;
   };
   return (
-    <div>
-      <Link to="/home/guajolotes">Home</Link>
-      <ul>
+    <Cont>
+      <Link className="GoHome" to="/home/guajolotes">Home</Link>
+      <BtnEliminar onClick={() => eliminarCarrito()}>Eliminar Carrito</BtnEliminar>
+
+      <MiniCards>
         {carrito.map((prod) => (
-          <li key={prod.id}>
-            <img src={prod.imagen} alt="" />
-            <h1>{prod.nombre}</h1>
-            <p>$ {prod.precio} MXN</p>
-          </li>
+          <CardMini key={prod.id}>
+            <ImgProd src={prod.imagen} alt="" />
+            <NombreP>{prod.nombre}</NombreP>
+            <PrecioP>$ {prod.precio} MXN</PrecioP>
+          </CardMini>
         ))}
         {combo.map((prod) => (
-          <li key={prod.id}>
+          <CardMini key={prod.id}>
             <img src={prod.imagen} alt="" />
-            <h1>{prod.nombre}</h1>
-            <p>$ {prod.precio} MXN</p>
-          </li>
+            <NombreP>{prod.nombre}</NombreP>
+            <PrecioP>$ {prod.precio} MXN</PrecioP>
+          </CardMini>
         ))}
-      </ul>
-      <h1>Total: $ {getPrecio()} MXN</h1>
-      <button onClick={() => eliminarCarrito()}>Eliminar Carrito</button>
-    </div>
+      </MiniCards>
+      <ContTotal>
+      <TotalT>Total:  <PrecioTotal> $ {getPrecio()} MXN</PrecioTotal></TotalT>
+      </ContTotal>
+      <BtnPagar>Pagar</BtnPagar>
+    </Cont>
   );
 };
 

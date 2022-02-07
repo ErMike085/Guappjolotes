@@ -19,3 +19,11 @@ body {
   text-decoration: underline;
   color:#FA4A0C ;
 }
+.GoHome{
+  text-decoration: none;
+  background: #FA4A0C;
+  border-radius: 4px;
+  padding: 1%;
+  color:white;
+  float: left;
+}
